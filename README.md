@@ -1,4 +1,6 @@
 # STRIPS-HGN
+**Update - 21st June 2020**: our re-implementation of STRIPS-HGN is almost ready to go and is currently undergoing testing and experiments. We intend to make it available before the end of June. 
+
 STRIPS-HGN is a framework for learning domain-independent planning heuristics completely from scratch using the hypergraph induced by the delete-relaxation of a STRIPS problem. 
 
 The code for STRIPS-HGN will be made available in the coming months.
