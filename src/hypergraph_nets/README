@@ -1,0 +1,17 @@
+This hypergraph_nets library is heavily based off 'graph_nets', a framework for
+general graph neural networks developed by Google Deepmind.
+
+Their framework was implemented using Tensorflow and Sonnet: https://github.com/deepmind/graph_nets/
+Our framework is implemented using PyTorch, and generalises graphs to hypergraphs.
+
+
+Modules to rework:
+- aggregators.py
+- blocks.py
+- broadcast.py
+- hypergraphs.py
+
+
+Modules done:
+- models.py
+- modules.py

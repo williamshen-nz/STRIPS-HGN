@@ -1,0 +1,15 @@
+torch >= 1.5.0
+scikit-learn >= 0.21.3
+dataclasses
+
+# Custom version of pyperplan
+git+https://github.com/williamshen-nz/pyperplan
+
+# Lightning's API is not stable
+pytorch-lightning == 0.7.6
+
+# Nice looking coloured logs
+coloredlogs == 14.0
+
+# pytest
+pytest >= 5.0.0

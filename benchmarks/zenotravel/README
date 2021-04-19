@@ -1,0 +1,4 @@
+See 'generator' for how problems were generated
+
+All problems in 'train' and 'test' have been checked and are unique in terms of initial state and goal state.
+Object naming has not been considered in this check

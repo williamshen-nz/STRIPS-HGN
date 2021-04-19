@@ -1,0 +1,6 @@
+Problems generated using ../generator/gen_custom_probs_will.sh
+
+Initial state is unique from goal state for all problems in train/ and test/
+i.e. initial state is different to goal state
+
+Checked using learning_heuristics/identical_problems.py
