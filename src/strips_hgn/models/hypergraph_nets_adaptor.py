@@ -171,6 +171,20 @@ def merge_hypergraphs_tuple(
         ]
     )
 
+    # Need to increase indices for each hypergraph based on number of nodes
+    # in previous hypergraphs
+    n_edge_cumsum = torch.cumsum(n_edge, dim=0)
+    n_node_cumsum = torch.cumsum(n_node, dim=0)
+    for idx, (n_edge_prev, n_edge_cur) in enumerate(
+        zip(n_edge_cumsum, n_edge_cumsum[1:])
+    ):
+        receivers[n_edge_prev:n_edge_cur][
+            receivers[n_edge_prev:n_edge_cur] != -1
+        ] += n_node_cumsum[idx]
+        senders[n_edge_prev:n_edge_cur][
+            senders[n_edge_prev:n_edge_cur] != -1
+        ] += n_node_cumsum[idx]
+
     # Check padding consistent across hypergraphs
     assert len(set(h.zero_padding for h in graphs_tuple_list)) == 1
     zero_padding = graphs_tuple_list[0].zero_padding
