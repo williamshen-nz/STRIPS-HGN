@@ -1,13 +1,7 @@
 # STRIPS-HGN
 
 STRIPS-HGN is a framework for learning domain-independent planning heuristics completely from scratch using the
-hypergraph induced by the delete-relaxation of a STRIPS problem. This repository contains the official implementation of
-the paper:
-
-**Learning Domain-Independent Planning Heuristics with Hypergraph Networks**<br>
-[William Shen](https://shen.nz), [Felipe Trevizan](https://felipe.trevizan.org/), [Sylvie Thiébaux](https://users.cecs.anu.edu.au/~thiebaux/)<br>
-The Australian National University<br>
-ICAPS 2020
+hypergraph induced by the delete-relaxation of a STRIPS problem.
 
 For any issues please open a [GitHub issue](https://github.com/williamshen-nz/STRIPS-HGN/issues/new), or contact the
 authors of the paper. You can find our emails in the [paper](https://shen.nz/papers/shen-stripshgn-20.pdf).
@@ -22,9 +16,9 @@ authors of the paper. You can find our emails in the [paper](https://shen.nz/pap
 
 We recommend you use a virtual environment (e.g. `virtualenv` or `conda`). STRIPS-HGN requires Python 3.6+.
 
-1. Create Python environment (we're using conda here).
+1. Create Python environment (we're using conda and Python 3.8).
    ```bash
-   conda create -n stripshgn python=3.6
+   conda create -n stripshgn python=3.8
    conda activate stripshgn
    ```
 2. Clone the repo and install the dependencies.
@@ -34,18 +28,12 @@ We recommend you use a virtual environment (e.g. `virtualenv` or `conda`). STRIP
    pip install -r requirements.txt
    ```
 3. Clone our custom version of [Fast Downward](https://github.com/williamshen-nz/fast_downward.git) and build it.
-   The build may take a few minutes.
+   The build may take a minute or two.
    ```bash
-   git clone https://github.com/williamshen-nz/fast_downward.git
-   cd fast_downward
-   python build.py
-   ``` 
-4. Set your `PYTHONPATH` to include the top-level directory (which should contain `fast_downward`) and the `src`
-   directory.
-   ```bash
-   export PYTHONPATH=$PYTHONPATH:$(pwd):$(pwd)/src
+   git clone https://github.com/williamshen-nz/fast_downward.git src/fast_downward
+   python src/fast_downward/build.py
    ```
-5. Try running the train script to make sure everything is working.
+4. Try running the train script to make sure everything is working. If you see the help message then you're good to go.
    ```bash
    python src/train.py --help
    ```
