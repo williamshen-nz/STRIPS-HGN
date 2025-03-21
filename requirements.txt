@@ -6,7 +6,7 @@ dataclasses
 git+https://github.com/williamshen-nz/pyperplan
 
 # Lightning's API is not stable
-pytorch-lightning == 0.7.6
+pytorch-lightning == 2.4.0
 
 # Nice looking coloured logs
 coloredlogs == 14.0
